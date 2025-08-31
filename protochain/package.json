@@ -6,7 +6,8 @@
     "compile": "npx tsc",
     "dev": "npx nodemon --watch ./src/ --exec npx ts-node ./src/blockchain.ts -e ts",
     "start": "node ./dist/blockchain.js",
-    "test": "jest"
+    "test": "jest",
+    "blockchain": "ts-node ./src/server/blockchainServer.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +15,10 @@
   "description": "",
   "devDependencies": {
     "@types/crypto-js": "^4.2.2",
+    "@types/express": "^5.0.3",
     "@types/jest": "^30.0.0",
     "@types/mocha": "^10.0.10",
+    "@types/morgan": "^1.9.10",
     "@types/node": "^24.1.0",
     "jest": "^30.0.5",
     "ts-jest": "^29.4.0",
@@ -23,6 +26,8 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "crypto-js": "^4.2.0"
+    "crypto-js": "^4.2.0",
+    "express": "^5.1.0",
+    "morgan": "^1.10.1"
   }
 }
